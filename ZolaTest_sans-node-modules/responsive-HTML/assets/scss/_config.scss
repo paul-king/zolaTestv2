@@ -1,0 +1,74 @@
+/********************************************************************************************************
+ * This is an example of how SASS variables can be used to create a configuration file that 
+ * is easy to mantain and change for different clients. It's based (loosely) on the ITCSS:
+ *
+ * https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ *
+ * I didn't have time to cover every CSS declaration, but hopfully this provides a good idea how it works
+ *********************************************************************************************************/
+// Font Imports
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Baskerville');
+
+// Font Defaults
+$sans				: 'Josefin Sans';
+$serif				: 'Libre Baskerville';
+$sans-stack			: $sans, sans-serif;
+$serif-stack		: $serif, serif;
+
+// Fonts - Specific
+$body-family		: $sans-stack;
+$body-lineheight	: 28px;
+$body-size			: 19px;
+$body-spacing		: 1;
+$body-weight		: normal;
+
+$header-family		: $serif-stack;
+$header-size		: 42px;
+$header-spacing		: 0;
+$header-weight		: normal;
+
+$subhead-family		: $serif-stack;
+$subhead-size		: 16px;
+$subhead-spacing	: 0;
+$subhead-style		: italic;
+$subhead-transform	: lowercase;
+
+$title-family		: $serif-stack;
+$title-size			: 70px;
+$title-mobile-size	: 35px;
+$title-spacing		: 4;
+$title-weight		: normal;
+
+// Colors
+$white		: #ffffff;
+$primary	: #6CB35D;
+$secondary	: #BAE1B2;
+$accent		: #A5E0EE;
+
+// Layout
+$mobile-breakpoint	: 960px;
+$header-breakpoint	: 600px;
+
+$header-margin		: 0 auto;
+$header-max-width	: 510px;
+
+$marquee-bg			: url('../img/Couple.jpg') no-repeat $white;
+$marquee-box-shadow	: inset 0px 2px 2px 0px rgba(0,0,0,0.3);
+
+$row-clear	: both;
+$row-width	: 100%;
+
+$stories-bg-color	: $primary;
+$stories-color		: $white;
+
+$story-col-width	: 50%;
+$story-col-left-border	: 2px solid $white;
+
+// Spacing
+$base		: 1rem;
+$space-100	: $base;
+$space-150	: $base * 1.5;
+$space-200	: $base * 2;
+$space-300	: $base * 3;
+$space-400	: $base * 4;
+$space-800	: $base * 8;

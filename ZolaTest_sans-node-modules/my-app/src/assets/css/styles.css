@@ -1,0 +1,79 @@
+/* line 1, ../scss/styles.scss */
+body, html {
+  background: #cccccc;
+}
+
+/* line 5, ../scss/styles.scss */
+.age {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* line 10, ../scss/styles.scss */
+category {
+  font-size: 12px;
+}
+
+/* line 14, ../scss/styles.scss */
+h2.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 19, ../scss/styles.scss */
+.filter__wrap {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* line 24, ../scss/styles.scss */
+.hidden {
+  display: none;
+}
+
+/* line 26, ../scss/styles.scss */
+.user-card {
+  border: 2px solid #000000;
+  flex: 0 0 30%;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+/* line 32, ../scss/styles.scss */
+.user-card[priority="1"] {
+  background-color: orange;
+}
+/* line 33, ../scss/styles.scss */
+.user-card[priority="2"] {
+  background-color: green;
+}
+/* line 34, ../scss/styles.scss */
+.user-card[priority="3"] {
+  background-color: blue;
+}
+/* line 35, ../scss/styles.scss */
+.user-card[priority="1"] {
+  background-color: purple;
+}
+
+/* line 38, ../scss/styles.scss */
+.user-grid {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 42, ../scss/styles.scss */
+.user-grid__controls {
+  margin-bottom: 2rem;
+}
+/* line 43, ../scss/styles.scss */
+.user-grid__filter {
+  margin-top: 1rem;
+}
+/* line 44, ../scss/styles.scss */
+.user-grid__wrap {
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 900px;
+}

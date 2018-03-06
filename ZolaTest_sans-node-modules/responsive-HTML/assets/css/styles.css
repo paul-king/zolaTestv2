@@ -1,0 +1,253 @@
+/********************************************************************************************************
+ * This is an example of how SASS variables can be used to create a configuration file that 
+ * is easy to mantain and change for different clients. It's based (loosely) on the ITCSS:
+ *
+ * https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ *
+ * I didn't have time to cover every CSS declaration, but hopfully this provides a good idea how it works
+ *********************************************************************************************************/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Baskerville");
+/* line 1, ../scss/_layout.scss */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, ../scss/_layout.scss */
+.header__row--bottom {
+  height: 100px;
+}
+
+/* line 9, ../scss/_layout.scss */
+.header__row--top div {
+  display: inline-block;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+/* line 13, ../scss/_layout.scss */
+.header__row--top div:last-of-type {
+  float: right;
+}
+@media all and (max-width: 600px) {
+  /* line 9, ../scss/_layout.scss */
+  .header__row--top div {
+    display: none;
+  }
+}
+
+/* line 19, ../scss/_layout.scss */
+.header__text {
+  margin: 0 auto;
+  max-width: 510px;
+  position: relative;
+  text-align: center;
+  top: 35%;
+}
+@media all and (max-width: 600px) {
+  /* line 19, ../scss/_layout.scss */
+  .header__text {
+    text-align: left;
+  }
+}
+
+/* line 30, ../scss/_layout.scss */
+.marquee {
+  height: 0;
+  padding-top: 54%;
+  position: relative;
+  z-index: 99;
+}
+/* line 35, ../scss/_layout.scss */
+.marquee__inner-wrap {
+  background: url("../img/Couple.jpg") no-repeat #ffffff;
+  background-size: 100% auto;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+/* line 46, ../scss/_layout.scss */
+.marquee .large-title {
+  line-height: 75px;
+  margin: 0 auto;
+  min-height: 145px;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  width: 700px;
+}
+@media all and (max-width: 960px) {
+  /* line 46, ../scss/_layout.scss */
+  .marquee .large-title {
+    line-height: 40px;
+    width: 75%;
+  }
+}
+
+/* line 61, ../scss/_layout.scss */
+.outer-wrap {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+@media all and (max-width: 960px) {
+  /* line 61, ../scss/_layout.scss */
+  .outer-wrap {
+    width: 100%;
+  }
+}
+
+/* line 69, ../scss/_layout.scss */
+.row {
+  clear: both;
+  padding: 0 1rem;
+}
+
+/* line 74, ../scss/_layout.scss */
+.stories {
+  background-color: #6CB35D;
+  color: #ffffff;
+  padding-bottom: 4rem;
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* line 84, ../scss/_layout.scss */
+.story__column {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+@media all and (max-width: 960px) {
+  /* line 84, ../scss/_layout.scss */
+  .story__column {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 92, ../scss/_layout.scss */
+.story__column--left {
+  border-right: 2px solid #ffffff;
+}
+@media all and (max-width: 960px) {
+  /* line 92, ../scss/_layout.scss */
+  .story__column--left {
+    border-right: none;
+    margin-bottom: 3rem;
+  }
+}
+/* line 99, ../scss/_layout.scss */
+.story__column--right {
+  padding: 0 4rem;
+}
+/* line 101, ../scss/_layout.scss */
+.story__column--right p {
+  width: 75%;
+}
+@media all and (max-width: 960px) {
+  /* line 99, ../scss/_layout.scss */
+  .story__column--right {
+    padding: 0;
+  }
+  /* line 106, ../scss/_layout.scss */
+  .story__column--right p {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+}
+
+/* line 115, ../scss/_layout.scss */
+.story__column-img {
+  margin: 0 auto;
+}
+/* line 117, ../scss/_layout.scss */
+.story__column-img img {
+  max-width: 125px;
+}
+@media all and (max-width: 960px) {
+  /* line 115, ../scss/_layout.scss */
+  .story__column-img {
+    display: none;
+  }
+}
+
+/* line 123, ../scss/_layout.scss */
+.story__column-title {
+  margin: 1.5rem 0;
+}
+
+/* line 127, ../scss/_layout.scss */
+.story__row {
+  display: flex;
+  padding-top: 8rem;
+}
+@media all and (max-width: 960px) {
+  /* line 127, ../scss/_layout.scss */
+  .story__row {
+    display: block;
+  }
+  /* line 132, ../scss/_layout.scss */
+  .story__row:last-of-type {
+    border-bottom: none;
+    padding-top: 0;
+  }
+}
+
+@media all and (max-width: 960px) {
+  /* line 139, ../scss/_layout.scss */
+  .story__row:last-of-type .story__column--right p {
+    border-bottom: none;
+  }
+}
+
+/* line 1, ../scss/_typography.scss */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  letter-spacing: 1;
+  line-height: 28px;
+}
+
+/* line 9, ../scss/_typography.scss */
+.header {
+  font-family: "Libre Baskerville", serif;
+  font-size: 42px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+@media all and (max-width: 600px) {
+  /* line 9, ../scss/_typography.scss */
+  .header {
+    font-size: 1rem;
+  }
+}
+
+/* line 19, ../scss/_typography.scss */
+.large-title {
+  color: #ffffff;
+  font-family: "Libre Baskerville", serif;
+  font-size: 70px;
+  font-weight: normal;
+  letter-spacing: 4;
+}
+@media all and (max-width: 960px) {
+  /* line 19, ../scss/_typography.scss */
+  .large-title {
+    font-size: 35px;
+  }
+}
+
+/* line 30, ../scss/_typography.scss */
+.subhead {
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}

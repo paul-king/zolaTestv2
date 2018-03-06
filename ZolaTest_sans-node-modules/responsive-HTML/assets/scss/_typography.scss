@@ -1,0 +1,36 @@
+body {
+	font-family: $body-family;
+	font-size: $body-size;
+	font-weight: $body-weight;
+	letter-spacing: $body-spacing;
+	line-height: $body-lineheight;
+}
+
+.header {
+	font-family: $header-family;
+	font-size: $header-size;
+	font-weight: $header-weight;
+	letter-spacing: $header-spacing;
+	@media all and ( max-width: $header-breakpoint ) {
+		font-size: $base;
+	}
+}
+
+.large-title {
+	color: $white;
+	font-family: $title-family;
+	font-size: $title-size;
+	font-weight: $title-weight;
+	letter-spacing: $title-spacing;
+	@media all and ( max-width: $mobile-breakpoint ) {
+		font-size: $title-mobile-size;
+	}
+}
+
+.subhead {
+	font-family: $subhead-family;
+	font-size: $subhead-size;
+	font-style: $subhead-style;
+	letter-spacing: $subhead-spacing;
+	text-transform: $subhead-transform;
+}
